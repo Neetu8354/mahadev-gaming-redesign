@@ -19,47 +19,22 @@ const Index = () => {
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://www.mahadevbookbets.live/#organization",
       name: "Mahadev Book",
-      alternateName: ["Mahadev Book ID", "Mahadevvbooks"],
-      url: "https://mahadevbookbets.live/",
-      logo: "https://mahadevbookbets.live/favicon.png",
-      image: "https://mahadevbookbets.live/og-image.jpg",
-      description: "India's most trusted online cricket betting & live casino ID provider with instant UPI deposits & withdrawals in INR.",
-      sameAs: ["https://wa.link/reddyanna_"],
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "Customer Support",
-        availableLanguage: ["English", "Hindi"],
-        url: "https://wa.link/reddyanna_",
-      },
-      areaServed: { "@type": "Country", name: "India" },
+      url: "https://www.mahadevbookbets.live/",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.mahadevbookbets.live/favicon.png"
+      }
     },
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": "https://www.mahadevbookbets.live/#website",
+      url: "https://www.mahadevbookbets.live/",
       name: "Mahadev Book",
-      url: "https://mahadevbookbets.live/",
-      potentialAction: {
-        "@type": "SearchAction",
-        target: "https://mahadevbookbets.live/blog?q={search_term_string}",
-        "query-input": "required name=search_term_string",
-      },
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      name: "Online Cricket Betting ID & Live Casino",
-      serviceType: "Cricket betting ID provider",
-      provider: { "@type": "Organization", name: "Mahadev Book", url: "https://mahadevbookbets.live/" },
-      areaServed: { "@type": "Country", name: "India" },
-      description: "Instant verified online cricket betting ID for IPL 2026, T20 World Cup and live casino games like Teen Patti, Andar Bahar, Roulette. UPI deposit & withdrawal in INR.",
-      offers: {
-        "@type": "Offer",
-        price: "100",
-        priceCurrency: "INR",
-        availability: "https://schema.org/InStock",
-        url: "https://wa.link/reddyanna_",
-      },
+      publisher: { "@id": "https://www.mahadevbookbets.live/#organization" },
+      inLanguage: "en-IN"
     },
     {
       "@context": "https://schema.org",
@@ -73,11 +48,6 @@ const Index = () => {
         { "@type": "Question", name: "What is the minimum deposit?", acceptedAnswer: { "@type": "Answer", text: "Just ₹100 — start small and scale as you go." } },
       ],
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://mahadevbookbets.live/" }],
-    },
   ];
 
   const featured = BLOG_POSTS.slice(0, 3);
@@ -85,10 +55,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Mahadev Book — India's #1 Online Cricket Betting ID | IPL 2026 & Live Casino"
-        description="Get your verified Mahadev Book ID instantly via WhatsApp. India's most trusted online cricket betting & live casino — IPL 2026, T20, Teen Patti, Andar Bahar, Roulette. Instant UPI deposit & withdrawal in INR. 24x7 Hindi support."
+        title="Mahadev Book — Online Cricket Betting ID & Live Casino"
+        description="Get your verified Mahadev Book ID instantly via WhatsApp. India's trusted online cricket betting & live casino with IPL 2026, Teen Patti, Andar Bahar. Instant UPI deposit & withdrawal in INR. 24x7 Hindi support."
         canonical="/"
-        keywords="mahadev book, online cricket betting id, ipl 2026 betting, live casino india, teen patti online, andar bahar real money, upi betting, instant withdrawal betting, cricket id provider"
         jsonLd={jsonLd}
       />
       <TickerBar />
