@@ -1,0 +1,15 @@
+{
+  "name": "Mahadev Book — India's #1 Online Cricket Betting ID",
+  "short_name": "Mahadev Book",
+  "description": "Get your verified Mahadev Book ID instantly via WhatsApp. IPL 2026, T20, Teen Patti, Andar Bahar, Roulette — UPI deposit & withdrawal in INR.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "lang": "en-IN",
+  "categories": ["sports", "entertainment", "games"],
+  "icons": [
+    { "src": "/favicon.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/favicon.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

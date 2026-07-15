@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Mahadev Book - Black & Gold luxury betting theme */
+    --background: 0 0% 4%;
+    --foreground: 45 90% 92%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 45 90% 92%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 45 90% 92%;
+
+    --primary: 45 88% 55%;          /* gold */
+    --primary-foreground: 0 0% 6%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 45 90% 92%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 45 20% 70%;
+
+    --accent: 38 92% 50%;           /* darker amber gold */
+    --accent-foreground: 0 0% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 40% 22%;
+    --input: 0 0% 14%;
+    --ring: 45 88% 55%;
+
+    --radius: 0.75rem;
+
+    --gold: 45 88% 55%;
+    --gold-light: 48 96% 70%;
+    --gold-dark: 38 75% 38%;
+    --whatsapp: 142 70% 45%;
+
+    --gradient-gold: linear-gradient(135deg, hsl(48 96% 70%), hsl(45 88% 55%) 50%, hsl(38 75% 38%));
+    --gradient-gold-soft: linear-gradient(135deg, hsl(45 88% 55% / 0.15), hsl(38 75% 38% / 0.05));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 4%), hsl(0 0% 8%));
+    --gradient-radial-gold: radial-gradient(circle at center, hsl(45 88% 55% / 0.25), transparent 70%);
+
+    --shadow-gold: 0 10px 40px -10px hsl(45 88% 55% / 0.5);
+    --shadow-gold-lg: 0 20px 60px -15px hsl(45 88% 55% / 0.6);
+    --shadow-card: 0 8px 30px -8px hsl(0 0% 0% / 0.6);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    /* Same — site is dark by default */
+    --background: 0 0% 4%;
+    --foreground: 45 90% 92%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image:
+      radial-gradient(ellipse at top, hsl(45 88% 55% / 0.08), transparent 60%),
+      radial-gradient(ellipse at bottom, hsl(38 75% 38% / 0.06), transparent 60%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .border-gold {
+    border-image: var(--gradient-gold) 1;
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(hsl(45 88% 55% / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(45 88% 55% / 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .glow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+}
+
+@layer utilities {
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, hsl(45 88% 55% / 0.4), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2.5s linear infinite;
+  }
+
+  @keyframes pulse-gold {
+    0%, 100% { box-shadow: 0 0 0 0 hsl(142 70% 45% / 0.6); }
+    50% { box-shadow: 0 0 0 14px hsl(142 70% 45% / 0); }
+  }
+  .animate-pulse-whatsapp { animation: pulse-gold 2s infinite; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  .animate-float { animation: float 4s ease-in-out infinite; }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee { animation: marquee 30s linear infinite; }
+}
