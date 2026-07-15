@@ -14,7 +14,7 @@ export const Hero = () => {
       <div className="relative container py-16 sm:py-24 md:py-36 lg:py-44">
         <div className="max-w-3xl space-y-5 sm:space-y-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold text-[10px] sm:text-xs font-semibold tracking-wide uppercase">
-            <Zap className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> India's #1 Cricket Betting ID
+            <Zap className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Trusted Cricket Betting ID
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">
@@ -43,7 +43,7 @@ export const Hero = () => {
           </div>
 
           <div className="flex flex-wrap items-center gap-6 pt-6">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground"><ShieldCheck className="w-4 h-4 text-gold" /> 100% Safe & Secure</div>
+            <div className="flex items-center gap-2 text-sm text-muted-foreground"><ShieldCheck className="w-4 h-4 text-gold" /> Safe & Secure</div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground"><Zap className="w-4 h-4 text-gold" /> Instant UPI Withdrawal</div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground"><Trophy className="w-4 h-4 text-gold" /> 60,000+ Live Events / Month</div>
           </div>

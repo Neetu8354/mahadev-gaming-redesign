@@ -22,7 +22,7 @@ export const Header = () => {
         <a href="#home" className="flex items-center shrink-0">
           <img
             src={logo}
-            alt="Mahadev Book — India's #1 online cricket betting ID provider"
+            alt="Mahadev Book — Trusted online cricket betting ID provider"
             className="h-9 sm:h-11 md:h-12 lg:h-14 w-auto"
             width={224}
             height={56}

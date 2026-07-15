@@ -42,7 +42,7 @@ const Index = () => {
       mainEntity: [
         { "@type": "Question", name: "What is Mahadev Book?", acceptedAnswer: { "@type": "Answer", text: "Mahadev Book is India's most trusted online cricket betting and live casino ID provider with instant INR deposits & withdrawals via UPI." } },
         { "@type": "Question", name: "How do I get a Mahadev Book ID?", acceptedAnswer: { "@type": "Answer", text: "Click any 'Get ID' button to chat on WhatsApp. We provide your verified ID within 2 minutes, 24x7." } },
-        { "@type": "Question", name: "Is Mahadev Book safe?", acceptedAnswer: { "@type": "Answer", text: "Yes — verified KYC, encrypted transactions, and 100% secure funds. Trusted by thousands of Indian players." } },
+        { "@type": "Question", name: "Is Mahadev Book safe?", acceptedAnswer: { "@type": "Answer", text: "Yes — verified KYC, encrypted transactions, and secure funds. Trusted by Indian players." } },
         { "@type": "Question", name: "What payment methods are supported?", acceptedAnswer: { "@type": "Answer", text: "UPI, PhonePe, Google Pay, Paytm, IMPS, NEFT and direct bank transfer — all in INR." } },
         { "@type": "Question", name: "How fast are withdrawals?", acceptedAnswer: { "@type": "Answer", text: "Most UPI withdrawals settle within 5–15 minutes, 24x7." } },
         { "@type": "Question", name: "What is the minimum deposit?", acceptedAnswer: { "@type": "Answer", text: "Just ₹100 — start small and scale as you go." } },

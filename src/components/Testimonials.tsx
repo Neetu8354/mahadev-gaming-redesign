@@ -12,7 +12,7 @@ export const Testimonials = () => (
     <div className="text-center max-w-2xl mx-auto mb-12">
       <div className="text-gold text-sm font-semibold tracking-widest uppercase mb-3">Player Reviews</div>
       <h2 className="text-3xl md:text-5xl font-display font-bold">
-        Trusted by <span className="text-gradient-gold">10 Lakh+ Indians</span>
+        Trusted by <span className="text-gradient-gold">Indian Players</span>
       </h2>
     </div>
     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">

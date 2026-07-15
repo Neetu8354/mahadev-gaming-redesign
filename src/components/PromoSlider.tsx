@@ -56,7 +56,7 @@ export const PromoSlider = () => {
               <div className="container py-6 sm:py-0">
                 <div className="max-w-lg space-y-2 sm:space-y-4">
                   <div className="text-gold text-[10px] sm:text-xs md:text-sm font-semibold tracking-widest uppercase">{s.eyebrow}</div>
-                  <h3 className="text-2xl sm:text-3xl md:text-5xl font-display font-bold text-gradient-gold">{s.title}</h3>
+                  <h2 className="text-2xl sm:text-3xl md:text-5xl font-display font-bold text-gradient-gold">{s.title}</h2>
                   <p className="text-xs sm:text-sm md:text-base text-foreground/80">{s.subtitle}</p>
                   <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
                     className="inline-flex px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-gradient-gold text-primary-foreground font-bold text-sm sm:text-base shadow-gold hover:scale-105 transition-transform">

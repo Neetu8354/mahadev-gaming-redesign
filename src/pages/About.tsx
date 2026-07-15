@@ -13,12 +13,12 @@ const About = () => {
       "@context": "https://schema.org",
       "@type": "AboutPage",
       name: "About Mahadev Book",
-      url: "https://mahadevbookbets.live/about",
+      url: "https://www.mahadevbookbets.live/about",
       description: "Learn about Mahadev Book — India's most trusted online cricket betting & live casino ID provider since 2019.",
       mainEntity: {
         "@type": "Organization",
         name: "Mahadev Book",
-        url: "https://mahadevbookbets.live/",
+        url: "https://www.mahadevbookbets.live/",
         foundingDate: "2019",
         areaServed: { "@type": "Country", name: "India" },
       },
@@ -27,8 +27,8 @@ const About = () => {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mahadevbookbets.live/" },
-        { "@type": "ListItem", position: 2, name: "About Us", item: "https://mahadevbookbets.live/about" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mahadevbookbets.live/" },
+        { "@type": "ListItem", position: 2, name: "About Us", item: "https://www.mahadevbookbets.live/about" },
       ],
     },
   ];
@@ -36,7 +36,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="About Mahadev Book — India's #1 Online Cricket Betting ID Provider Since 2019"
+        title="About Mahadev Book — Trusted Online Cricket Betting ID Provider Since 2019"
         description="Mahadev Book has been India's most trusted online cricket betting & live casino ID provider since 2019. 12,000+ verified players, 24x7 WhatsApp support, instant UPI withdrawal in INR."
         canonical="/about"
         keywords="about mahadev book, mahadev book company, online cricket id provider india, trusted betting id, mahadev book history"
@@ -78,7 +78,7 @@ const About = () => {
 
           <h2 className="text-2xl md:text-3xl font-display font-bold text-gold">Why Players Choose Mahadev Book</h2>
           <ul className="space-y-3">
-            <li className="flex gap-3"><ShieldCheck className="w-5 h-5 text-gold shrink-0 mt-1" /> <span><strong>100% safe and secure</strong> — encrypted transactions, KYC-verified accounts, zero data leaks.</span></li>
+            <li className="flex gap-3"><ShieldCheck className="w-5 h-5 text-gold shrink-0 mt-1" /> <span><strong>Safe and secure</strong> — encrypted transactions, KYC-verified accounts, zero data leaks.</span></li>
             <li className="flex gap-3"><Zap className="w-5 h-5 text-gold shrink-0 mt-1" /> <span><strong>Instant UPI deposit & withdrawal</strong> — most withdrawals settle in 5–15 minutes via PhonePe, Google Pay, Paytm.</span></li>
             <li className="flex gap-3"><Trophy className="w-5 h-5 text-gold shrink-0 mt-1" /> <span><strong>60,000+ live sports events / month</strong> — IPL 2026, T20 World Cup, BBL, PSL, every major cricket league.</span></li>
             <li className="flex gap-3"><Headphones className="w-5 h-5 text-gold shrink-0 mt-1" /> <span><strong>24x7 WhatsApp support</strong> in Hindi and English — average response under 60 seconds.</span></li>
