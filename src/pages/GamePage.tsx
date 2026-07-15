@@ -13,7 +13,7 @@ const GamePage = () => {
   const game = GAMES.find(g => g.slug === slug);
   if (!game) return <Navigate to="/" replace />;
 
-  const url = `https://mahadevbookbets.live/games/${game.slug}`;
+  const url = `https://www.mahadevbookbets.live/games/${game.slug}`;
   const jsonLd: object[] = [
     {
       "@context": "https://schema.org",
@@ -22,25 +22,24 @@ const GamePage = () => {
       url,
       description: game.description,
       inLanguage: "en-IN",
-      isPartOf: { "@type": "WebSite", name: "Mahadev Book", url: "https://mahadevbookbets.live/" },
+      isPartOf: { "@type": "WebSite", name: "Mahadev Book", url: "https://www.mahadevbookbets.live/" },
     },
     {
       "@context": "https://schema.org",
       "@type": "Service",
       name: game.h1,
       serviceType: game.category,
-      provider: { "@type": "Organization", name: "Mahadev Book", url: "https://mahadevbookbets.live/" },
+      provider: { "@type": "Organization", name: "Mahadev Book", url: "https://www.mahadevbookbets.live/" },
       areaServed: { "@type": "Country", name: "India" },
       description: game.description,
       offers: { "@type": "Offer", price: "100", priceCurrency: "INR", availability: "https://schema.org/InStock", url: WHATSAPP_LINK },
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", bestRating: "5", ratingCount: "2480" },
     },
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mahadevbookbets.live/" },
-        { "@type": "ListItem", position: 2, name: "Games", item: "https://mahadevbookbets.live/games" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mahadevbookbets.live/" },
+        { "@type": "ListItem", position: 2, name: "Games", item: "https://www.mahadevbookbets.live/games" },
         { "@type": "ListItem", position: 3, name: game.h1, item: url },
       ],
     },
