@@ -7,7 +7,7 @@ import { Link, useLocation } from "react-router-dom";
 const NAV = [
   { label: "Home", href: "/" },
   { label: "Cricket", href: "/games/cricket" },
-  { label: "Casino", href: "/games/teen-patti" },
+  { label: "Teen Patti", href: "/games/teen-patti" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
