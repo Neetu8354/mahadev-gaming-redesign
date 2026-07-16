@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <section id="home" className="relative overflow-hidden">
       <div className="absolute inset-0">
-        <img src={heroImg} alt="Play IPL 2026 online cricket betting on Mahadev Book — India's #1 betting ID" className="w-full h-full object-cover opacity-60" width={1920} height={1080} fetchPriority="high" decoding="async" />
+        <img src={heroImg} alt="Cricket stadium with players on field during match" className="w-full h-full object-cover opacity-60" width={1920} height={1080} fetchPriority="high" decoding="async" />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
       </div>
