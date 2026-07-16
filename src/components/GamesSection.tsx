@@ -6,25 +6,26 @@ import blackjack from "@/assets/game-blackjack.jpg";
 import slots from "@/assets/game-slots.jpg";
 import dragontiger from "@/assets/game-dragontiger.jpg";
 import { WHATSAPP_LINK } from "@/lib/links";
+import { Link } from "react-router-dom";
 
 const CRICKET_GAMES = [
-  { img: cricket, title: "IPL Betting", desc: "Bet on every IPL match, ball-by-ball live odds.", alt: "Bet on IPL 2026 live online with Mahadev Book India" },
-  { img: cricket, title: "T20 World Cup", desc: "ICC T20 & 50-over World Cup live markets.", alt: "T20 World Cup online betting on Mahadev Book India" },
-  { img: cricket, title: "Test & ODI", desc: "Test matches, ODIs, BBL, PSL — every league.", alt: "Test, ODI and BBL cricket betting online on Mahadev Book" },
-  { img: cricket, title: "Fancy Cricket", desc: "Session, lambi, over runs & toss markets.", alt: "Fancy cricket betting session and lambi on Mahadev Book India" },
+  { img: cricket, title: "IPL Betting", desc: "Bet on every IPL match, ball-by-ball live odds.", alt: "Cricket stadium with players during IPL match", link: "/games/cricket" },
+  { img: cricket, title: "T20 World Cup", desc: "ICC T20 & 50-over World Cup live markets.", alt: "Cricket stadium with players during T20 World Cup", link: "/games/cricket" },
+  { img: cricket, title: "Test & ODI", desc: "Test matches, ODIs, BBL, PSL — every league.", alt: "Cricket stadium with players during Test match", link: "/games/cricket" },
+  { img: cricket, title: "Fancy Cricket", desc: "Session, lambi, over runs & toss markets.", alt: "Cricket stadium with players during match", link: "/games/cricket" },
 ];
 
 const CASINO_GAMES = [
-  { img: teenpatti, title: "Teen Patti", desc: "India's favourite — 3-card live action.", alt: "Play Teen Patti online real money India on Mahadev Book" },
-  { img: andarbahar, title: "Andar Bahar", desc: "Classic Indian card game with live dealers.", alt: "Live Andar Bahar online India with Mahadev Book casino" },
-  { img: roulette, title: "Roulette", desc: "European & Lightning roulette tables.", alt: "Play online Roulette India real money on Mahadev Book" },
-  { img: blackjack, title: "Live Blackjack", desc: "Real dealers, real-time rounds, real ₹ wins.", alt: "Live Blackjack online India INR — Mahadev Book casino" },
-  { img: dragontiger, title: "Dragon Tiger", desc: "Fast-paced card battle, instant results.", alt: "Dragon Tiger live casino India on Mahadev Book" },
-  { img: slots, title: "777 Slots", desc: "200+ premium slots with mega jackpots.", alt: "Online 777 slots real money India — Mahadev Book casino" },
+  { img: teenpatti, title: "Teen Patti", desc: "India's favourite — 3-card live action.", alt: "Teen Patti card game table with dealer", link: "/games/teen-patti" },
+  { img: andarbahar, title: "Andar Bahar", desc: "Classic Indian card game with live dealers.", alt: "Andar Bahar card game table with dealer", link: "/games/andar-bahar" },
+  { img: roulette, title: "Roulette", desc: "European & Lightning roulette tables.", alt: "Roulette wheel on casino table", link: "/games/roulette" },
+  { img: blackjack, title: "Live Blackjack", desc: "Real dealers, real-time rounds, real ₹ wins.", alt: "Blackjack card game table with dealer", link: "/games/roulette" },
+  { img: dragontiger, title: "Dragon Tiger", desc: "Fast-paced card battle, instant results.", alt: "Dragon Tiger card game table with dealer", link: "/games/dragon-tiger" },
+  { img: slots, title: "777 Slots", desc: "200+ premium slots with mega jackpots.", alt: "Casino slot machines with colorful graphics", link: "/games/roulette" },
 ];
 
-const Card = ({ img, title, desc, alt }: { img: string; title: string; desc: string; alt: string }) => (
-  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
+const Card = ({ img, title, desc, alt, link }: { img: any; title: string; desc: string; alt: string; link: string }) => (
+  <Link to={link}
     className="group relative rounded-2xl overflow-hidden border border-gold/20 bg-card hover:border-gold/60 transition-all hover:-translate-y-1 shadow-card hover:shadow-gold">
     <div className="aspect-square overflow-hidden">
       <img src={img} alt={alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" width={800} height={800} />
@@ -34,10 +35,10 @@ const Card = ({ img, title, desc, alt }: { img: string; title: string; desc: str
       <h3 className="font-display font-bold text-lg md:text-xl text-gold mb-1">{title}</h3>
       <p className="text-xs md:text-sm text-muted-foreground line-clamp-2">{desc}</p>
       <div className="mt-3 inline-flex items-center text-xs font-semibold text-gold group-hover:gap-2 gap-1 transition-all">
-        Play Now →
+        Learn More →
       </div>
     </div>
-  </a>
+  </Link>
 );
 
 export const GamesSection = () => (
