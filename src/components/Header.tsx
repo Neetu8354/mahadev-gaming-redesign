@@ -2,7 +2,7 @@ import logo from "@/assets/logo.png";
 import { WHATSAPP_LINK } from "@/lib/links";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const NAV = [
   { label: "Home", href: "/" },
@@ -15,6 +15,7 @@ const NAV = [
 
 export const Header = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-gold/20">
       <div className="container flex items-center justify-between py-2.5 sm:py-3 gap-2 sm:gap-4">
@@ -33,9 +34,10 @@ export const Header = () => {
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           {NAV.map((n) => {
             const isInternal = n.href.startsWith("/") && !n.href.includes("#");
+            const isActive = location.pathname === n.href;
             const cls = "text-sm font-medium text-foreground/90 hover:text-gold transition-colors";
             return isInternal ? (
-              <Link key={n.href} to={n.href} className={cls}>{n.label}</Link>
+              <Link key={n.href} to={n.href} className={cls} aria-current={isActive ? "page" : undefined}>{n.label}</Link>
             ) : (
               <a key={n.href} href={n.href} className={cls}>{n.label}</a>
             );
@@ -77,9 +79,10 @@ export const Header = () => {
         <div id="mobile-menu" className="lg:hidden border-t border-gold/20 bg-background/95 px-6 py-4 space-y-3">
           {NAV.map((n) => {
             const isInternal = n.href.startsWith("/") && !n.href.includes("#");
+            const isActive = location.pathname === n.href;
             const cls = "block py-2 text-foreground/90 hover:text-gold";
             return isInternal ? (
-              <Link key={n.href} to={n.href} onClick={() => setOpen(false)} className={cls}>{n.label}</Link>
+              <Link key={n.href} to={n.href} onClick={() => setOpen(false)} className={cls} aria-current={isActive ? "page" : undefined}>{n.label}</Link>
             ) : (
               <a key={n.href} href={n.href} onClick={() => setOpen(false)} className={cls}>{n.label}</a>
             );
