@@ -12,24 +12,37 @@ const Contact = () => {
     {
       "@context": "https://schema.org",
       "@type": "ContactPage",
-      name: "Contact Mahadev Book",
+      "@id": "https://www.mahadevbookbets.live/contact#webpage",
       url: "https://www.mahadevbookbets.live/contact",
-      description: "Contact Mahadev Book on WhatsApp 24x7 in Hindi and English. Get your online cricket betting ID, deposit, withdrawal & support instantly.",
+      name: "Contact Mahadev Book",
+      description: "Contact Mahadev Book for account and payment support.",
+      inLanguage: "en-IN",
       mainEntity: {
-        "@type": "Organization",
-        name: "Mahadev Book",
-        url: "https://www.mahadevbookbets.live/",
-        contactPoint: [
-          {
-            "@type": "ContactPoint",
-            contactType: "Customer Support",
-            availableLanguage: ["English", "Hindi"],
-            url: "https://wa.link/reddyanna_",
-            areaServed: "IN",
-            hoursAvailable: "Mo-Su 00:00-23:59",
-          },
-        ],
+        "@id": "https://www.mahadevbookbets.live/#organization"
       },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.mahadevbookbets.live/#organization",
+      name: "Mahadev Book",
+      url: "https://www.mahadevbookbets.live/",
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        url: "https://wa.link/reddyanna_",
+        areaServed: "IN",
+        availableLanguage: ["English", "Hindi"],
+        hoursAvailable: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [
+            "Monday", "Tuesday", "Wednesday", "Thursday",
+            "Friday", "Saturday", "Sunday"
+          ],
+          opens: "00:00",
+          closes: "23:59"
+        }
+      }
     },
     {
       "@context": "https://schema.org",
@@ -44,8 +57,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Contact Mahadev Book — 24x7 WhatsApp Support India | Get Cricket ID Online"
-        description="Contact Mahadev Book on WhatsApp 24x7 in Hindi & English. Get your online cricket betting ID, deposit, withdrawal & support instantly. Average response under 60 seconds."
+        title="Contact Mahadev Book | 24x7 WhatsApp Support India"
+        description="Contact Mahadev Book on WhatsApp for cricket betting IDs, deposits, withdrawals and account support in Hindi or English, available 24x7."
         canonical="/contact"
         jsonLd={jsonLd}
       />
