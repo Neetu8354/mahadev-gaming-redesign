@@ -13,11 +13,12 @@ const Contact = () => {
       "@context": "https://schema.org",
       "@type": "ContactPage",
       name: "Contact Mahadev Book",
-      url: "https://mahadevbookbets.live/contact",
+      url: "https://www.mahadevbookbets.live/contact",
       description: "Contact Mahadev Book on WhatsApp 24x7 in Hindi and English. Get your online cricket betting ID, deposit, withdrawal & support instantly.",
       mainEntity: {
         "@type": "Organization",
         name: "Mahadev Book",
+        url: "https://www.mahadevbookbets.live/",
         contactPoint: [
           {
             "@type": "ContactPoint",
@@ -34,8 +35,8 @@ const Contact = () => {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mahadevbookbets.live/" },
-        { "@type": "ListItem", position: 2, name: "Contact", item: "https://mahadevbookbets.live/contact" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mahadevbookbets.live/" },
+        { "@type": "ListItem", position: 2, name: "Contact", item: "https://www.mahadevbookbets.live/contact" },
       ],
     },
   ];
@@ -46,14 +47,17 @@ const Contact = () => {
         title="Contact Mahadev Book — 24x7 WhatsApp Support India | Get Cricket ID Online"
         description="Contact Mahadev Book on WhatsApp 24x7 in Hindi & English. Get your online cricket betting ID, deposit, withdrawal & support instantly. Average response under 60 seconds."
         canonical="/contact"
-        keywords="mahadev book contact, mahadev book whatsapp, mahadev book support, get cricket id online, online betting id support india"
         jsonLd={jsonLd}
       />
       <TickerBar />
       <Header />
       <main className="container py-10 md:py-16 max-w-4xl">
         <nav aria-label="Breadcrumb" className="text-sm text-muted-foreground mb-6">
-          <Link to="/" className="hover:text-gold">Home</Link> <span className="mx-2">/</span> <span className="text-gold">Contact</span>
+          <ol className="flex items-center gap-2">
+            <li><Link to="/" className="hover:text-gold">Home</Link></li>
+            <li className="mx-2">/</li>
+            <li aria-current="page" className="text-gold">Contact</li>
+          </ol>
         </nav>
 
         <header className="mb-10">

@@ -7,7 +7,7 @@ export const Footer = () => (
   <footer className="border-t border-gold/20 bg-gradient-dark mt-12">
     <div className="container py-14 grid md:grid-cols-5 gap-10">
       <div className="md:col-span-2">
-        <img src={logo} alt="Get cricket ID online instantly on Mahadev Book India" className="h-14 w-auto mb-4" width={224} height={56} loading="lazy" />
+        <img src={logo} alt="Mahadev Book" className="h-14 w-auto mb-4" width={224} height={56} loading="lazy" />
         <p className="text-sm text-muted-foreground max-w-md leading-relaxed">
           Mahadev Book is India's most trusted online cricket betting and live casino ID provider. Get instant verified IDs, INR deposits & withdrawals, and 24x7 WhatsApp support.
         </p>
