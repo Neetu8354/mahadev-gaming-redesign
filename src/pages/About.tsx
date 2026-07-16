@@ -12,16 +12,29 @@ const About = () => {
     {
       "@context": "https://schema.org",
       "@type": "AboutPage",
-      name: "About Mahadev Book",
+      "@id": "https://www.mahadevbookbets.live/about#webpage",
       url: "https://www.mahadevbookbets.live/about",
-      description: "Learn about Mahadev Book — India's most trusted online cricket betting & live casino ID provider since 2019.",
+      name: "About Mahadev Book",
+      inLanguage: "en-IN",
       mainEntity: {
-        "@type": "Organization",
-        name: "Mahadev Book",
-        url: "https://www.mahadevbookbets.live/",
-        foundingDate: "2019",
-        areaServed: { "@type": "Country", name: "India" },
+        "@id": "https://www.mahadevbookbets.live/#organization"
       },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.mahadevbookbets.live/#organization",
+      name: "Mahadev Book",
+      url: "https://www.mahadevbookbets.live/",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.mahadevbookbets.live/assets/logo.png"
+      },
+      foundingDate: "2019",
+      areaServed: {
+        "@type": "Country",
+        name: "India"
+      }
     },
     {
       "@context": "https://schema.org",
@@ -36,17 +49,20 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="About Mahadev Book — Trusted Online Cricket Betting ID Provider Since 2019"
-        description="Mahadev Book has been India's most trusted online cricket betting & live casino ID provider since 2019. 12,000+ verified players, 24x7 WhatsApp support, instant UPI withdrawal in INR."
+        title="About Mahadev Book | Cricket Betting ID Provider India"
+        description="Mahadev Book has provided online cricket betting and live casino IDs in India since 2019, with UPI payments and 24x7 WhatsApp support."
         canonical="/about"
-        keywords="about mahadev book, mahadev book company, online cricket id provider india, trusted betting id, mahadev book history"
         jsonLd={jsonLd}
       />
       <TickerBar />
       <Header />
       <main className="container py-10 md:py-16 max-w-5xl">
         <nav aria-label="Breadcrumb" className="text-sm text-muted-foreground mb-6">
-          <Link to="/" className="hover:text-gold">Home</Link> <span className="mx-2">/</span> <span className="text-gold">About Us</span>
+          <ol className="flex items-center gap-2">
+            <li><Link to="/" className="hover:text-gold">Home</Link></li>
+            <li className="mx-2">/</li>
+            <li aria-current="page" className="text-gold">About Us</li>
+          </ol>
         </nav>
 
         <header className="mb-10">
@@ -73,7 +89,7 @@ const About = () => {
         <section className="prose-invert max-w-none space-y-6 text-foreground/90 leading-relaxed">
           <h2 className="text-2xl md:text-3xl font-display font-bold text-gold">Our Story</h2>
           <p>
-            Mahadev Book was founded in 2019 by a small team of cricket fans tired of unreliable online <strong>cricket ID providers</strong> who took deposits and disappeared. We built Mahadev Book on three rules: <strong>instant verified IDs</strong>, <strong>real INR withdrawals via UPI</strong>, and <strong>real humans on WhatsApp 24x7</strong>. Six years later, we are India's #1 trusted name for <Link to="/games/cricket" className="text-gold underline">online cricket betting</Link> and <Link to="/games/teen-patti" className="text-gold underline">live casino games</Link>.
+            Mahadev Book was founded in 2019 by a small team of cricket fans tired of unreliable online <strong>cricket ID providers</strong> who took deposits and disappeared. We built Mahadev Book on three rules: <strong>instant verified IDs</strong>, <strong>real INR withdrawals via UPI</strong>, and <strong>real humans on WhatsApp 24x7</strong>. Since then, we have become India's trusted name for <Link to="/games/cricket" className="text-gold underline">online cricket betting</Link> and <Link to="/games/teen-patti" className="text-gold underline">live casino games</Link>.
           </p>
 
           <h2 className="text-2xl md:text-3xl font-display font-bold text-gold">Why Players Choose Mahadev Book</h2>
