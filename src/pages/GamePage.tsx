@@ -32,15 +32,13 @@ const GamePage = () => {
       provider: { "@type": "Organization", name: "Mahadev Book", url: "https://www.mahadevbookbets.live/" },
       areaServed: { "@type": "Country", name: "India" },
       description: game.description,
-      offers: { "@type": "Offer", price: "100", priceCurrency: "INR", availability: "https://schema.org/InStock", url: WHATSAPP_LINK },
     },
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mahadevbookbets.live/" },
-        { "@type": "ListItem", position: 2, name: "Games", item: "https://www.mahadevbookbets.live/games" },
-        { "@type": "ListItem", position: 3, name: game.h1, item: url },
+        { "@type": "ListItem", position: 2, name: game.h1, item: url },
       ],
     },
     {
@@ -58,7 +56,6 @@ const GamePage = () => {
         title={game.title}
         description={game.description}
         canonical={`/games/${game.slug}`}
-        keywords={game.keywords}
         ogImage="/og-image.jpg"
         jsonLd={jsonLd}
       />
@@ -87,7 +84,7 @@ const GamePage = () => {
         </header>
 
         <div className="aspect-video w-full rounded-2xl overflow-hidden border border-gold/20 mb-10 bg-muted">
-          <img src={game.image} alt={game.alt} className="w-full h-full object-cover" loading="eager" width={1280} height={720} />
+          <img src={game.image} alt={game.alt} className="w-full h-full object-cover" loading="eager" fetchPriority="high" width={1280} height={720} />
         </div>
 
         <section className="grid md:grid-cols-3 gap-5 mb-10">

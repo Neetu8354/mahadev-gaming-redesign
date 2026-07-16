@@ -66,7 +66,6 @@ const BlogPost = () => {
         title={`${post.title} | Mahadev Book`}
         description={post.description}
         canonical={`/blog/${post.slug}`}
-        keywords={post.keywords}
         ogType="article"
         publishedTime={post.publishedAt}
         modifiedTime={post.updatedAt}

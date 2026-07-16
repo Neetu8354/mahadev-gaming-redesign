@@ -4,7 +4,6 @@ interface SEOProps {
   title: string;
   description: string;
   canonical?: string;
-  keywords?: string;
   ogImage?: string;
   ogType?: "website" | "article";
   publishedTime?: string;
@@ -20,7 +19,6 @@ export const SEO = ({
   title,
   description,
   canonical,
-  keywords,
   ogImage = "/og-image.jpg",
   ogType = "website",
   publishedTime,
@@ -37,7 +35,6 @@ export const SEO = ({
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
       <meta name="author" content={author} />
       {noindex ? (
         <meta name="robots" content="noindex,nofollow" />

@@ -19,10 +19,10 @@ export const Header = () => {
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-gold/20">
       <div className="container flex items-center justify-between py-2.5 sm:py-3 gap-2 sm:gap-4">
         {/* Logo */}
-        <a href="#home" className="flex items-center shrink-0">
+        <a href="/" className="flex items-center shrink-0">
           <img
             src={logo}
-            alt="Mahadev Book — Trusted online cricket betting ID provider"
+            alt="Mahadev Book"
             className="h-9 sm:h-11 md:h-12 lg:h-14 w-auto"
             width={224}
             height={56}

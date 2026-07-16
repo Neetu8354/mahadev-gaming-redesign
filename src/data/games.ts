@@ -11,7 +11,6 @@ export interface GameDef {
   title: string;
   h1: string;
   description: string;
-  keywords: string;
   intro: string;
   image: string;
   alt: string;
@@ -25,13 +24,12 @@ export const GAMES: GameDef[] = [
     slug: "cricket",
     shortName: "Cricket Betting",
     category: "Sports",
-    title: "Online Cricket Betting India 2026 — IPL, T20, ODI Live Odds | Mahadev Book",
-    h1: "Online Cricket Betting India — IPL 2026, T20 World Cup & Live Odds",
-    description: "Play online cricket betting in India on Mahadev Book — IPL 2026, T20 World Cup, BBL, PSL, Tests & ODIs. Match-odds, fancy, session, lambi & toss. UPI deposit, INR withdrawal, 24x7 support.",
-    keywords: "online cricket betting india, ipl 2026 betting, t20 world cup betting, fancy cricket bet, live cricket betting tips online, online sports betting platform",
-    intro: "Mahadev Book is India's most trusted online cricket betting platform — bet on every IPL match, T20 World Cup, BBL, PSL, Tests and ODIs with the best live odds in INR.",
+    title: "Cricket Betting India: IPL, T20 & Live Odds | Mahadev Book",
+    h1: "Online Cricket Betting India — Live Match Odds and Markets",
+    description: "Play online cricket betting in India on Mahadev Book — IPL, T20 World Cup, BBL, PSL, Tests & ODIs. Match-odds, fancy, session, lambi & toss. UPI deposit, INR withdrawal, 24x7 support.",
+    intro: "Mahadev Book is an online cricket betting platform — bet on IPL matches, T20 World Cup, BBL, PSL, Tests and ODIs with live odds in INR.",
     image: sportCricket,
-    alt: "Bet on online cricket IPL 2026 live with Mahadev Book India",
+    alt: "Cricket stadium with players during match",
     features: [
       { title: "IPL & T20 Live Odds", text: "Ball-by-ball match-odds, bookmaker, fancy, session and toss markets." },
       { title: "60,000+ Events / Month", text: "Every league worldwide — IPL, BBL, PSL, CPL, county, women's." },
@@ -54,8 +52,7 @@ export const GAMES: GameDef[] = [
     category: "Live Casino",
     title: "Play Teen Patti Online Real Money India — Live 24x7 | Mahadev Book",
     h1: "Play Teen Patti Online Real Money — Live Indian Card Game",
-    description: "Play Teen Patti online real money India on Mahadev Book — live dealers 24x7, AA Bonus, side bets, ₹100 minimum. UPI deposit & instant INR withdrawal. India's #1 Teen Patti site.",
-    keywords: "teen patti online real money, play teen patti india, live teen patti, 3 patti online india, teen patti india website",
+    description: "Play Teen Patti online real money India on Mahadev Book — live dealers 24x7, AA Bonus, side bets, ₹100 minimum. UPI deposit & instant INR withdrawal. India's Teen Patti site.",
     intro: "Teen Patti is India's favourite 3-card game. Play live, against real dealers, 24x7 on Mahadev Book — with AA Bonus, side bets and big jackpots, all in INR.",
     image: gameTeenpatti,
     alt: "Play Teen Patti online real money India on Mahadev Book live casino",
@@ -81,7 +78,6 @@ export const GAMES: GameDef[] = [
     title: "Play Andar Bahar Online India — Live Real Money 24x7 | Mahadev Book",
     h1: "Play Andar Bahar Online — Live Indian Card Game Real Money",
     description: "Play Andar Bahar online real money India on Mahadev Book — live dealers, side bets, ₹100 min deposit. Instant UPI withdrawal in INR. Classic Indian casino game 24x7.",
-    keywords: "andar bahar online, play andar bahar real money, live andar bahar india, andar bahar app, andar bahar website india",
     intro: "Andar Bahar is the simplest, fastest, most loved Indian casino game. Play live on Mahadev Book — real dealers, real INR, 24x7.",
     image: gameAndar,
     alt: "Play live Andar Bahar online India real money on Mahadev Book",
@@ -107,7 +103,6 @@ export const GAMES: GameDef[] = [
     title: "Play Online Roulette India Real Money — European & Lightning | Mahadev Book",
     h1: "Online Roulette India — Live European, Lightning & Auto Roulette",
     description: "Play online Roulette India real money on Mahadev Book — European, Lightning & Auto Roulette tables 24x7. ₹100 min deposit, INR withdrawal via UPI. Live HD dealers.",
-    keywords: "online roulette india, live roulette real money, european roulette online, lightning roulette india, mahadev book roulette",
     intro: "Spin live European, Lightning and Auto Roulette tables on Mahadev Book — real dealers, real INR, 24x7.",
     image: gameRoulette,
     alt: "Play live online Roulette India real money on Mahadev Book casino",
@@ -133,7 +128,6 @@ export const GAMES: GameDef[] = [
     title: "Play Dragon Tiger Online India — Live Card Game Real Money | Mahadev Book",
     h1: "Dragon Tiger Online India — Fast Live Card Game",
     description: "Play Dragon Tiger online India on Mahadev Book — fastest live card game, ₹100 min deposit, instant INR withdrawal via UPI. 30-second rounds, real dealers 24x7.",
-    keywords: "dragon tiger online, play dragon tiger india, live dragon tiger real money, dragon tiger casino india",
     intro: "Dragon Tiger is the fastest live casino game — 30-second rounds, single card per side, easy 50/50 bets. Play on Mahadev Book in INR 24x7.",
     image: gameDragon,
     alt: "Dragon Tiger live casino card game online India on Mahadev Book",
