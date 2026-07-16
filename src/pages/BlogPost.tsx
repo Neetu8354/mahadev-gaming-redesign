@@ -13,7 +13,7 @@ const BlogPost = () => {
   const post = BLOG_POSTS.find(p => p.slug === slug);
   if (!post) return <Navigate to="/blog" replace />;
 
-  const url = `https://mahadevbookbets.live/blog/${post.slug}`;
+  const url = `https://www.mahadevbookbets.live/blog/${post.slug}`;
   const related = post.related.map(s => BLOG_POSTS.find(p => p.slug === s)).filter(Boolean);
 
   const jsonLd: object[] = [
@@ -23,16 +23,15 @@ const BlogPost = () => {
       mainEntityOfPage: { "@type": "WebPage", "@id": url },
       headline: post.title,
       description: post.description,
-      image: [`https://mahadevbookbets.live/og-image.jpg`],
+      image: [`https://www.mahadevbookbets.live/og-image.jpg`],
       datePublished: post.publishedAt,
       dateModified: post.updatedAt,
-      author: { "@type": "Organization", name: post.author, url: "https://mahadevbookbets.live" },
+      author: { "@type": "Organization", name: post.author, url: "https://www.mahadevbookbets.live" },
       publisher: {
         "@type": "Organization",
         name: "Mahadev Book",
-        logo: { "@type": "ImageObject", url: "https://mahadevbookbets.live/favicon.png" },
+        logo: { "@type": "ImageObject", url: "https://www.mahadevbookbets.live/favicon.png" },
       },
-      keywords: post.keywords,
       articleSection: post.category,
       wordCount: post.content.split(/\s+/).length,
       inLanguage: "en-IN",
@@ -41,8 +40,8 @@ const BlogPost = () => {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mahadevbookbets.live/" },
-        { "@type": "ListItem", position: 2, name: "Blog", item: "https://mahadevbookbets.live/blog" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mahadevbookbets.live/" },
+        { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.mahadevbookbets.live/blog" },
         { "@type": "ListItem", position: 3, name: post.title, item: url },
       ],
     },
@@ -78,9 +77,13 @@ const BlogPost = () => {
 
       <main className="container py-8 md:py-12 max-w-4xl">
         <nav aria-label="Breadcrumb" className="text-sm text-muted-foreground mb-6">
-          <Link to="/" className="hover:text-gold">Home</Link> <span className="mx-2">/</span>
-          <Link to="/blog" className="hover:text-gold">Blog</Link> <span className="mx-2">/</span>
-          <span className="text-gold">{post.category}</span>
+          <ol className="flex items-center gap-2">
+            <li><Link to="/" className="hover:text-gold">Home</Link></li>
+            <li className="mx-2">/</li>
+            <li><Link to="/blog" className="hover:text-gold">Blog</Link></li>
+            <li className="mx-2">/</li>
+            <li aria-current="page" className="text-gold">{post.category}</li>
+          </ol>
         </nav>
 
         <article>

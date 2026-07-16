@@ -12,13 +12,13 @@ const Blog = () => {
       "@context": "https://schema.org",
       "@type": "Blog",
       name: "Mahadev Book Blog",
-      url: "https://mahadevbookbets.live/blog",
+      url: "https://www.mahadevbookbets.live/blog",
       description: "Expert guides on cricket betting, IPL strategy, live casino, Teen Patti, Andar Bahar and online betting in India.",
-      publisher: { "@type": "Organization", name: "Mahadev Book", url: "https://mahadevbookbets.live" },
+      publisher: { "@type": "Organization", name: "Mahadev Book", url: "https://www.mahadevbookbets.live" },
       blogPost: BLOG_POSTS.map(p => ({
         "@type": "BlogPosting",
         headline: p.title,
-        url: `https://mahadevbookbets.live/blog/${p.slug}`,
+        url: `https://www.mahadevbookbets.live/blog/${p.slug}`,
         datePublished: p.publishedAt,
         dateModified: p.updatedAt,
         author: { "@type": "Organization", name: p.author },
@@ -29,8 +29,8 @@ const Blog = () => {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mahadevbookbets.live/" },
-        { "@type": "ListItem", position: 2, name: "Blog", item: "https://mahadevbookbets.live/blog" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mahadevbookbets.live/" },
+        { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.mahadevbookbets.live/blog" },
       ],
     },
   ];
@@ -38,17 +38,20 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Cricket Betting & Casino Blog India 2026 | Mahadev Book Guides & Tips"
-        description="Expert guides on IPL 2026 betting, online cricket ID, Teen Patti, Andar Bahar, live casino, UPI deposits and winning strategy. India's top betting blog."
+        title="Cricket Betting & Casino Blog India | Mahadev Book Guides & Tips"
+        description="Expert guides on IPL betting, online cricket ID, Teen Patti, Andar Bahar, live casino, UPI deposits and winning strategy. India's top betting blog."
         canonical="/blog"
-        keywords="cricket betting blog, ipl 2026 tips, teen patti guide, andar bahar strategy, online casino india, mahadev book blog"
         jsonLd={jsonLd}
       />
       <TickerBar />
       <Header />
       <main className="container py-10 md:py-16">
         <nav aria-label="Breadcrumb" className="text-sm text-muted-foreground mb-6">
-          <Link to="/" className="hover:text-gold">Home</Link> <span className="mx-2">/</span> <span className="text-gold">Blog</span>
+          <ol className="flex items-center gap-2">
+            <li><Link to="/" className="hover:text-gold">Home</Link></li>
+            <li className="mx-2">/</li>
+            <li aria-current="page" className="text-gold">Blog</li>
+          </ol>
         </nav>
 
         <header className="mb-10 max-w-3xl">
@@ -56,7 +59,7 @@ const Blog = () => {
             Mahadev Book Blog
           </h1>
           <p className="text-lg text-muted-foreground">
-            Expert guides on <strong className="text-gold">IPL 2026 betting</strong>, online cricket IDs, live casino strategy, Teen Patti, Andar Bahar, UPI payments and more — written by India's top tipsters and casino pros.
+            Expert guides on <strong className="text-gold">IPL betting</strong>, online cricket IDs, live casino strategy, Teen Patti, Andar Bahar, UPI payments and more — written by India's top tipsters and casino pros.
           </p>
         </header>
 

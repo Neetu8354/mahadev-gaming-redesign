@@ -63,8 +63,11 @@ const GamePage = () => {
       <Header />
       <main className="container py-10 md:py-16 max-w-5xl">
         <nav aria-label="Breadcrumb" className="text-sm text-muted-foreground mb-6">
-          <Link to="/" className="hover:text-gold">Home</Link> <span className="mx-2">/</span>
-          <span className="text-gold">{game.h1}</span>
+          <ol className="flex items-center gap-2">
+            <li><Link to="/" className="hover:text-gold">Home</Link></li>
+            <li className="mx-2">/</li>
+            <li aria-current="page" className="text-gold">{game.h1}</li>
+          </ol>
         </nav>
 
         <header className="mb-10">
